@@ -19,12 +19,11 @@ struct Home: View {
                 .padding(.bottom,35)
                 Button("Save payment") {
                     
-                }.font(.custom("Roboto-Bold", size: 16))
+                }.font(Font.system(size: 16).bold())
                 .frame(width: 327, height: 48)
                 .padding([.leading,.trailing], 24)
-                .padding(.bottom, 38)
                 . foregroundColor(.white)
-                .background(.orange)
+                .background(Color.init(UIColor(hexaString: "#F27A0A")))
                 .cornerRadius(12)
             
                 Spacer()

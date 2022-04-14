@@ -18,7 +18,7 @@ struct TotalTipView: View {
                 Text("$10.00")
                     .font(.custom("Roboto-Medium",
                                   size: 16)).padding(.trailing, 24)
-            }
+            }.padding(.bottom, 16)
         
             HStack {
                 Text("Per Person")
