@@ -24,6 +24,7 @@
 		68227620280764DB00DFEF72 /* TotalTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6822761F280764DB00DFEF72 /* TotalTipView.swift */; };
 		6822762228076E0900DFEF72 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6822762128076E0900DFEF72 /* PhotoView.swift */; };
 		68BB5F212808895600A480B0 /* TipColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BB5F202808895600A480B0 /* TipColor.swift */; };
+		68BB5F23280890D000A480B0 /* TipHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BB5F22280890D000A480B0 /* TipHomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		6822761F280764DB00DFEF72 /* TotalTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTipView.swift; sourceTree = "<group>"; };
 		6822762128076E0900DFEF72 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		68BB5F202808895600A480B0 /* TipColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipColor.swift; sourceTree = "<group>"; };
+		68BB5F22280890D000A480B0 /* TipHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipHomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		682275E428073A2200DFEF72 /* SwiftUICombineMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				68BB5F242808A79D00A480B0 /* ViewModel */,
 				6822761C28075E4A00DFEF72 /* views */,
 				682275E528073A2200DFEF72 /* SwiftUICombineMVVMApp.swift */,
 				682275E728073A2200DFEF72 /* ContentView.swift */,
@@ -163,6 +166,14 @@
 				6822762128076E0900DFEF72 /* PhotoView.swift */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		68BB5F242808A79D00A480B0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				68BB5F22280890D000A480B0 /* TipHomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +312,7 @@
 				6822761528073C2300DFEF72 /* AmountView.swift in Sources */,
 				682275F228073A2300DFEF72 /* SwiftUICombineMVVM.xcdatamodeld in Sources */,
 				682275E828073A2200DFEF72 /* ContentView.swift in Sources */,
+				68BB5F23280890D000A480B0 /* TipHomeViewModel.swift in Sources */,
 				6822762228076E0900DFEF72 /* PhotoView.swift in Sources */,
 				68227620280764DB00DFEF72 /* TotalTipView.swift in Sources */,
 				6822761928075DD100DFEF72 /* TipNavigation.swift in Sources */,

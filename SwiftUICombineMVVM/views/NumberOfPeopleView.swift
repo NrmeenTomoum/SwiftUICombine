@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct NumberOfPeopleView: View {
+    private var viewModel : TipHomeViewModel
+    var counter : Double
+    init(viewModel: TipHomeViewModel, counter : Double){
+        self.viewModel = viewModel
+        self.counter = counter
+    }
     var body: some View {
         VStack {
             HStack {
@@ -18,37 +24,37 @@ struct NumberOfPeopleView: View {
             }
             ZStack {
                 HStack{
-                Button(action: {
+                    Button(action: {
+                        viewModel.addPeople()
+                    }, label: {
+                        Image("plus")
+                            .resizable()
+                            .frame(width: CGFloat(71), height: CGFloat(71))
+                    }).padding(.leading, CGFloat(28))
+                    Spacer()
                     
-                }, label: {
-                    Image("plus")
-                        .resizable()
-                        .frame(width: CGFloat(71), height: CGFloat(71))
-                }).padding(.leading, CGFloat(28))
-                Spacer()
-
                 }
-                Text("1")
-                        .font(.custom("Roboto-Medium",
-                                      size: 45)).padding(.leading, 45
-                                      )
+                Text("\(counter)")
+                    .font(.custom("Roboto-Medium",
+                                  size: 45)).padding(.leading, 45
+                                  )
                 HStack{
                     Spacer()
-                Button(action: {
-                    
-                }, label: {
-                    Image("minus")
-                        .resizable()
-                        .frame(width: CGFloat(71), height: CGFloat(71))
-                }).padding(.trailing, CGFloat(24))
+                    Button(action: {
+                        viewModel.removePeople()
+                    }, label: {
+                        Image("minus")
+                            .resizable()
+                            .frame(width: CGFloat(71), height: CGFloat(71))
+                    }).padding(.trailing, CGFloat(24))
                 }
             }.padding(.top, 16)
         }
     }
 }
-
-struct NumberOfPeopleView_Previews: PreviewProvider {
-    static var previews: some View {
-        NumberOfPeopleView()
-    }
-}
+//
+//struct NumberOfPeopleView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NumberOfPeopleView()
+//    }
+//}

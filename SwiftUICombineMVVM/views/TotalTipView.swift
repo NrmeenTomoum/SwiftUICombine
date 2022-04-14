@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct TotalTipView: View {
+    var totalTip : String = ""
+    var tipPerPerson : String = ""
+    init(tipPerPerson: String, totalTip : String){
+        self.tipPerPerson = tipPerPerson
+        self.totalTip = totalTip
+    }
     var body: some View {
         VStack {
             HStack {
@@ -15,27 +21,28 @@ struct TotalTipView: View {
                     .font(.custom("Roboto-Medium",
                                   size: 16)).padding(.leading, 24)
                 Spacer()
-                Text("$10.00")
+                Text(totalTip)
                     .font(.custom("Roboto-Medium",
                                   size: 16)).padding(.trailing, 24)
             }.padding(.bottom, 16)
-        
+            
             HStack {
                 Text("Per Person")
                     .font(.custom("Roboto-Medium",
                                   size: 24)).padding(.leading, 24)
                 Spacer()
-                Text("$10.00")
+                Text(tipPerPerson)
                     .font(.custom("Roboto-Medium",
                                   size: 24)).padding(.trailing, 24)
             }
-
+            
         }
     }
 }
 
 struct totalTipView_Previews: PreviewProvider {
     static var previews: some View {
-        TotalTipView()
+        TotalTipView(tipPerPerson: "10.00"
+                     ,totalTip: "10.00")
     }
 }

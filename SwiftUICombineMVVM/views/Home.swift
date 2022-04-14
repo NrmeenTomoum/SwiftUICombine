@@ -8,28 +8,32 @@
 import SwiftUI
 
 struct Home: View {
+    
+    @ObservedObject var viewModel = TipHomeViewModel()
+    
     var body: some View {
         VStack{
             TipNavigationView().padding(.top,24)
-            AmountView().padding(.top,30)
-            NumberOfPeopleView().padding(.top,32)
+            AmountView(viewModel: viewModel).padding(.top,30)
+            NumberOfPeopleView(viewModel:viewModel, counter: viewModel.counter).padding(.top,32)
             TipView().padding(.top,32)
-            TotalTipView().padding(.top,32)
+            TotalTipView(tipPerPerson: viewModel.tipPerPerson
+                         ,totalTip: viewModel.totalTip).padding(.top,32)
             PhotoView().padding(.top,32)
                 .padding(.bottom,35)
-                Button("Save payment") {
-                    
-                }.font(Font.system(size: 16).bold())
+            Button("Save payment") {
+                
+            }.font(Font.system(size: 16).bold())
                 .frame(width: 327, height: 48)
                 .padding([.leading,.trailing], 24)
                 . foregroundColor(.white)
                 .background(Color.init(UIColor(hexaString: "#F27A0A")))
                 .cornerRadius(12)
             
-                Spacer()
+            Spacer()
             
         }
-       
+        
     }
 }
 

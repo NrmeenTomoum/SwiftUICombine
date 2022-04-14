@@ -9,6 +9,10 @@ import SwiftUI
 
 struct AmountView: View {
     @State private var amount: String = ""
+    private var viewModel : TipHomeViewModel
+    init(viewModel: TipHomeViewModel){
+        self.viewModel = viewModel
+    }
     var body: some View {
         VStack {
             HStack {
@@ -18,8 +22,11 @@ struct AmountView: View {
                 Spacer()
             }
             ZStack {
-                
-                TextField("100.00", text: $amount) .textFieldStyle(RoundedBorderTextFieldStyle())
+                TextField("100.00", text: $amount,onCommit: {
+                    print(amount)
+                    self.viewModel.setAmount(amount: amount)
+                }
+                ) .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding([.leading,.trailing], 24)
                     .font(.custom("Roboto-Medium",
                                   size: 42))
@@ -36,8 +43,8 @@ struct AmountView: View {
     }
 }
 
-struct AmountView_Previews: PreviewProvider {
-    static var previews: some View {
-        AmountView()
-    }
-}
+//struct AmountView_Previews: PreviewProvider {
+//    static var previews: some View {
+//     AmountView(amount: "")
+//    }
+//}
