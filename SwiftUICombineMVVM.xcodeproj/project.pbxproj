@@ -16,6 +16,13 @@
 		682275FC28073A2400DFEF72 /* SwiftUICombineMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682275FB28073A2400DFEF72 /* SwiftUICombineMVVMTests.swift */; };
 		6822760628073A2400DFEF72 /* SwiftUICombineMVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6822760528073A2400DFEF72 /* SwiftUICombineMVVMUITests.swift */; };
 		6822760828073A2400DFEF72 /* SwiftUICombineMVVMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6822760728073A2400DFEF72 /* SwiftUICombineMVVMUITestsLaunchTests.swift */; };
+		6822761528073C2300DFEF72 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6822761428073C2300DFEF72 /* AmountView.swift */; };
+		6822761728075CCE00DFEF72 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6822761628075CCE00DFEF72 /* Home.swift */; };
+		6822761928075DD100DFEF72 /* TipNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6822761828075DD100DFEF72 /* TipNavigation.swift */; };
+		6822761B28075E4300DFEF72 /* NumberOfPeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6822761A28075E4300DFEF72 /* NumberOfPeopleView.swift */; };
+		6822761E2807637D00DFEF72 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6822761D2807637D00DFEF72 /* TipView.swift */; };
+		68227620280764DB00DFEF72 /* TotalTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6822761F280764DB00DFEF72 /* TotalTipView.swift */; };
+		6822762228076E0900DFEF72 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6822762128076E0900DFEF72 /* PhotoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +55,13 @@
 		6822760128073A2400DFEF72 /* SwiftUICombineMVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUICombineMVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6822760528073A2400DFEF72 /* SwiftUICombineMVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICombineMVVMUITests.swift; sourceTree = "<group>"; };
 		6822760728073A2400DFEF72 /* SwiftUICombineMVVMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICombineMVVMUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6822761428073C2300DFEF72 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
+		6822761628075CCE00DFEF72 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		6822761828075DD100DFEF72 /* TipNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipNavigation.swift; sourceTree = "<group>"; };
+		6822761A28075E4300DFEF72 /* NumberOfPeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfPeopleView.swift; sourceTree = "<group>"; };
+		6822761D2807637D00DFEF72 /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
+		6822761F280764DB00DFEF72 /* TotalTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTipView.swift; sourceTree = "<group>"; };
+		6822762128076E0900DFEF72 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +112,7 @@
 		682275E428073A2200DFEF72 /* SwiftUICombineMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				6822761C28075E4A00DFEF72 /* views */,
 				682275E528073A2200DFEF72 /* SwiftUICombineMVVMApp.swift */,
 				682275E728073A2200DFEF72 /* ContentView.swift */,
 				682275E928073A2300DFEF72 /* Assets.xcassets */,
@@ -131,6 +146,20 @@
 				6822760728073A2400DFEF72 /* SwiftUICombineMVVMUITestsLaunchTests.swift */,
 			);
 			path = SwiftUICombineMVVMUITests;
+			sourceTree = "<group>";
+		};
+		6822761C28075E4A00DFEF72 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				6822761628075CCE00DFEF72 /* Home.swift */,
+				6822761828075DD100DFEF72 /* TipNavigation.swift */,
+				6822761A28075E4300DFEF72 /* NumberOfPeopleView.swift */,
+				6822761428073C2300DFEF72 /* AmountView.swift */,
+				6822761D2807637D00DFEF72 /* TipView.swift */,
+				6822761F280764DB00DFEF72 /* TotalTipView.swift */,
+				6822762128076E0900DFEF72 /* PhotoView.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,9 +293,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				682275EF28073A2300DFEF72 /* Persistence.swift in Sources */,
+				6822761B28075E4300DFEF72 /* NumberOfPeopleView.swift in Sources */,
+				6822761528073C2300DFEF72 /* AmountView.swift in Sources */,
 				682275F228073A2300DFEF72 /* SwiftUICombineMVVM.xcdatamodeld in Sources */,
 				682275E828073A2200DFEF72 /* ContentView.swift in Sources */,
+				6822762228076E0900DFEF72 /* PhotoView.swift in Sources */,
+				68227620280764DB00DFEF72 /* TotalTipView.swift in Sources */,
+				6822761928075DD100DFEF72 /* TipNavigation.swift in Sources */,
+				6822761728075CCE00DFEF72 /* Home.swift in Sources */,
 				682275E628073A2200DFEF72 /* SwiftUICombineMVVMApp.swift in Sources */,
+				6822761E2807637D00DFEF72 /* TipView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
