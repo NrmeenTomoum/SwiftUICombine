@@ -23,9 +23,12 @@ struct TipNavigationView: View {
                     Button(action: {
                         
                     }, label: {
-                        Image("ic_history")
-                            .resizable()
-                            .frame(width: CGFloat(24), height: CGFloat(24))
+                        NavigationLink(destination: PaymentList(viewModel: PaymentViewModel())) {
+                            Image("ic_history")
+                                .resizable()
+                                .frame(width: CGFloat(24), height: CGFloat(24))
+                        }
+                      
                     }).padding(.trailing, CGFloat(24))
                 }
             }
