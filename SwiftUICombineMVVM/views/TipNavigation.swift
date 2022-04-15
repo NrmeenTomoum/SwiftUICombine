@@ -9,6 +9,10 @@ import SwiftUI
 
 
 struct TipNavigationView: View {
+    private var viewModel : TipHomeViewModel
+    init(viewModel: TipHomeViewModel){
+        self.viewModel = viewModel
+    }
     var body: some View {
         VStack {
             ZStack {
@@ -23,12 +27,12 @@ struct TipNavigationView: View {
                     Button(action: {
                         
                     }, label: {
-                        NavigationLink(destination: PaymentList(viewModel: PaymentViewModel())) {
+                        NavigationLink(destination: PaymentList(viewModel: self.viewModel)) {
                             Image("ic_history")
                                 .resizable()
                                 .frame(width: CGFloat(24), height: CGFloat(24))
                         }
-                      
+                        
                     }).padding(.trailing, CGFloat(24))
                 }
             }
@@ -38,6 +42,6 @@ struct TipNavigationView: View {
 
 struct TipNavigation_Previews: PreviewProvider {
     static var previews: some View {
-        TipNavigationView()
+        TipNavigationView(viewModel: TipHomeViewModel())
     }
 }
