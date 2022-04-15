@@ -34,7 +34,7 @@ struct NumberOfPeopleView: View {
                     Spacer()
                     
                 }
-                Text("\(counter)")
+                Text("\(Int(counter))")
                     .font(.custom("Roboto-Medium",
                                   size: 45)).padding(.leading, 45
                                   )
